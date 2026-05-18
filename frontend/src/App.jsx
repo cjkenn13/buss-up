@@ -30,17 +30,18 @@ function App() {
       <div>
         {/* app title */}
         <h1>Buss Up 🚌</h1>
-
+        <div className="search-row">
         {/* text box where user types the stop number */}
-        <input
-            type="text"
-            placeholder="Enter stop number..."
-            value={stopID}
-            onChange={(e) => setStopID(e.target.value)}
-        />
+            <input
+                type="text"
+                placeholder="Enter stop number..."
+                value={stopID}
+                onChange={(e) => setStopID(e.target.value)}
+            />
 
-        {/* button that triggers the search */}
-        <button onClick={searchArrivals}>Search</button>
+            {/* button that triggers the search */}
+            <button onClick={searchArrivals}>Search</button>
+        </div>
 
         {/* loading message*/}
         {loading && <p>Loading...</p>}
@@ -50,9 +51,9 @@ function App() {
 
         {/*loop through arrivals and show eacl*/}
         {arrivals.map((arrival) => (
-            <div key={arrival.id}>
-              <p>Route {arrival.route} - {arrival.headsign}</p>
-              <p>Arrives: {arrival.stopTime}</p>
+            <div key={arrival.id} className="arrival-card">
+              <p className="route">Route {arrival.route} - {arrival.headsign}</p>
+              <p className="time">Arrives: {arrival.stopTime}</p>
             </div>
         ))}
       </div>
