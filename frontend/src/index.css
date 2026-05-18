@@ -17,7 +17,7 @@
 
 body{
   background-color: var(--bg);
-  font-family: Georgia, serif;
+  font-family: 'Inter', sans-serif;
   color: var(--text);
   min-height: 100vh;
 }
@@ -53,6 +53,7 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .search-row{
@@ -118,4 +119,15 @@ button {
   font-weight: bold;
   color: var(--ocean);
   white-space: nowrap;
+}
+
+button:hover{
+  background-color: var(--navy);
+  transition: background-color 0.2s ease;
+}
+
+.subtitle{
+  font-size: 16px;
+  color: var(--text-light);
+  margin-bottom: 32px;
 }

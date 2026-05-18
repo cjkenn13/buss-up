@@ -30,6 +30,7 @@ function App() {
       <div>
         {/* app title */}
         <h1>Buss Up 🚌</h1>
+          <p className="subtitle">Real-time arrivals for Oahu bus stops</p>
         <div className="search-row">
         {/* text box where user types the stop number */}
             <input
