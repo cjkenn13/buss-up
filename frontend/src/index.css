@@ -67,6 +67,10 @@ button {
   padding: 16px 20px;
   margin-bottom: 12px;
   border-left: 4px solid var(--ocean);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;/*side by side*/
+  align-items: center;
+  gap: 16px;
 }
 
 .arrival-card .route {
@@ -84,4 +88,34 @@ button {
 .arrival-card:hover{
   border-left: 4px solid var(--yellow);
   cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.route-badge{
+  background-color: var(--ocean);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  min-width: 56px;
+  text-align: center;
+}
+
+.arrival-info{
+  flex: 1;
+}
+
+.headsign{
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--navy);
+}
+
+.arrival-time{
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--ocean);
+  white-space: nowrap;
 }

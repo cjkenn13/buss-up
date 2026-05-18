@@ -52,8 +52,16 @@ function App() {
         {/*loop through arrivals and show eacl*/}
         {arrivals.map((arrival) => (
             <div key={arrival.id} className="arrival-card">
-              <p className="route">Route {arrival.route} - {arrival.headsign}</p>
-              <p className="time">Arrives: {arrival.stopTime}</p>
+                {/*left: route number badge*/}
+              <div className="route-badge">{arrival.route}</div>
+                {/*middle destination name */}
+              <div className="arrival-info">
+                  <p className="headsign">{arrival.headsign}</p>
+              </div>
+                {/*arrival time right*/}
+                <div className="arrival-time">
+                    {arrival.stopTime}
+                </div>
             </div>
         ))}
       </div>
